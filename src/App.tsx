@@ -1,12 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <>Sample text</>;
+  return (
+    <div>
+      <Input placeholder="Enter email" />
+      <Button size="sm">Click me</Button>
+    </div>
+  );
 }
 
 export default App;
