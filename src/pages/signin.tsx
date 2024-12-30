@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -30,9 +31,9 @@ function SignIn() {
             <CardTitle className="text-3xl">Get's Started.</CardTitle>
             <CardDescription className="text-lg text-[#777E90]">
               Don't have an account?{" "}
-              <a className="text-primary" href="">
-                Sign up.
-              </a>
+              <Link to="/signup" className="text-primary">
+                Sign up
+              </Link>
             </CardDescription>
           </CardHeader>
 
