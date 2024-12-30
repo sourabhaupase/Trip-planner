@@ -11,7 +11,17 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import { useState } from "react";
+
 function SignIn() {
+  const [email, setEmail] = useState("");
+
+  const [password, setPassword] = useState("");
+
+  const handleSignIn = () => {
+    console.log(email, password);
+  };
+
   return (
     <div className="md:flex justify-center h-screen items-center p-2 md:p-0">
       <div>
@@ -45,16 +55,27 @@ function SignIn() {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Label className="mb-1" htmlFor="name">
+                  <Label className="mb-1" htmlFor="email">
                     Email
                   </Label>
-                  <Input id="name" placeholder="Email Address" />
+                  <Input
+                    id="name"
+                    placeholder="Email Address"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                  />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                   <Label className="mb-1" htmlFor="password">
                     Password
                   </Label>
-                  <Input type="password" id="password" placeholder="Password" />
+                  <Input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                  />
                 </div>
                 <div className="md:flex justify-between">
                   <Label className="flex items-center gap-1 cursor-pointer font-normal text-sm">
@@ -69,7 +90,9 @@ function SignIn() {
             </form>
           </CardContent>
           <CardFooter className="flex justify-center">
-            <Button className="w-full">sign in</Button>
+            <Button onClick={handleSignIn} className="w-full">
+              sign in
+            </Button>
           </CardFooter>
         </Card>
       </div>
