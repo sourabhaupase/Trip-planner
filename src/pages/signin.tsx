@@ -83,9 +83,9 @@ function SignIn() {
                     <Checkbox />
                     <span>Remember me</span>
                   </Label>
-                  <a href="" className="text-sm">
+                  <Link to="/forgotpassword" className="text-sm">
                     Forgot your password
-                  </a>
+                  </Link>
                 </div>
               </div>
             </form>
