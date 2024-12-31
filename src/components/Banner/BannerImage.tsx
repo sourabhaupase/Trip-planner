@@ -1,4 +1,3 @@
-import React from "react";
 import bannerImage from "../../assets/banner-image.png";
 
 export default function BannerImage() {

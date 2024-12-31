@@ -7,6 +7,7 @@ import SignIn from "./pages/signin.tsx";
 import Signup from "./pages/signup.tsx";
 import Forgotpassword from "./pages/forgotpassword.tsx";
 import EmailVerification from "./pages/emailverification.tsx";
+import PlanATrip from "./pages/plan-a-trip.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgotpassword" element={<Forgotpassword />} />
         <Route path="/emailverification" element={<EmailVerification />} />
+        <Route path="/plan-a-trip" element={<PlanATrip />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
